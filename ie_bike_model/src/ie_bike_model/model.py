@@ -135,8 +135,8 @@ def prepare_train_data():
     # creating duplicate columns for feature engineering
     hour = pd.get_dummies(hour)
     ## Set the Training Data and Test Data
-    hour_train = hour.iloc[0:15211]
-    hour_test = hour.iloc[15212:17379]
+    hour_train = hour.iloc[0:16000]
+    hour_test = hour.iloc[16001:17379]
     # Modelling Stage
     train = hour_train.drop(columns=["dteday", "casual", "atemp", "registered"])
     test = hour_test.drop(columns=["dteday", "casual", "registered", "atemp"])
